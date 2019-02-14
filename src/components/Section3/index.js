@@ -5,67 +5,73 @@ import partner3 from '../../static/partners/2.png';
 import partner4 from '../../static/partners/3.png';
 import partner5 from '../../static/partners/4.png';
 
-import Glide from '@glidejs/glide';
+import Slider from 'react-slick';
 
 class Section3 extends Component {
-    
-    componentDidMount() {
-        new Glide('#glide-partners', {
-            type: 'carousel',
-            perView: 5,
-            focusAt: 'center',
-            breakpoints: {
-                1140: {
-                    perView: 4
-                },
-                960: {
-                    perView: 3
-                },
-                768: {
-                    perView: 2
-                },
-                576: {
-                    perView: 1
-                }
-            }
-        }).mount();
-    }
-
     render() {
+        const settings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 900,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                }
+            ]
+        };
         return (
             <section className="section-3">
                 <h3 className="section-title">Our partners</h3>
-                <div className="glide partners" id="glide-partners">
-                    <div className="glide__track" data-glide-el="track">
-                    <ul className="glide__slides">
-                        <li className="glide__slide">
+                    <Slider {...settings} className="partners">
+                        <div>
                             <div className="partner-card">
                                 <img src={partner1} alt="partner" className="partner-logo" />
                             </div>
-                        </li>
-                        <li className="glide__slide">
+                        </div>
+                        <div>
                             <div className="partner-card">
                                 <img src={partner2} alt="partner" className="partner-logo" />
                             </div>
-                        </li>
-                        <li className="glide__slide">
+                        </div>
+                        <div>
                             <div className="partner-card">
                                 <img src={partner3} alt="partner" className="partner-logo" />
                             </div>
-                        </li>
-                        <li className="glide__slide">
+                        </div>
+                        <div>
                             <div className="partner-card">
                                 <img src={partner4} alt="partner" className="partner-logo" />
                             </div>
-                        </li>
-                        <li className="glide__slide">
+                        </div>
+                        <div>
                             <div className="partner-card">
                                 <img src={partner5} alt="partner" className="partner-logo" />
                             </div>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
+                        </div>
+                    </Slider>
             </section>
         );
     }

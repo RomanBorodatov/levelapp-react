@@ -4,85 +4,101 @@ import ethereum from '../../static/ethereum.png';
 import lvl from '../../static/lvl.png';
 import bitpanda from '../../static/bitpanda.png';
 
-import Glide from '@glidejs/glide';
+import Slider from 'react-slick';
 
 class Section4 extends Component {
-    componentDidMount() {
-        new Glide('#glide-currency', {
-            type: 'carousel',
-            perView: 4,
-            focusAt: '0',
-            breakpoints: {
-                1140: {
-                    perView: 4
-                },
-                768: {
-                    perView: 2
-                }
-            }
-        }).mount();
-    }
-
     render() {
+        const settings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 900,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
+        };
         return (
             <section className="section-4">
                 <h3 className="section-title">Buy crypto with payment card</h3>
                 <p className="section-subtitle">Select a card for payment</p>
-
-                <div className="glide currency-cards" id="glide-currency">
-                    <div className="glide__track" data-glide-el="track">
-                        <ul className="glide__slides">
-                            <li className="glide__slide">
+                <div className="currency-cards-container">
+                    <div className="currency-cards">
+                        <Slider {...settings}>
+                            <div>
                                 <div className="currency-card active">
                                     <span>BTC</span>
                                     <div className="bitcoin-logo">
                                         <img src={bitcoin} alt="logo" className="currency-logo bitcoin" />
                                     </div>
                                 </div>
-                            </li>
-                            <li className="glide__slide">
-                                <div className="currency-card">
+                            </div>
+                            <div>
+                                <a href="https://itunes.apple.com/ua/app/levelapp-crypto-wallet/id1444586019?l=ru&mt=8" className="currency-card">
                                     <span>ETH</span>
                                     <img src={ethereum} alt="logo" className="currency-logo" />
-                                </div>
-                            </li>
-                            <li className="glide__slide">
-                                <div className="currency-card">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://itunes.apple.com/ua/app/levelapp-crypto-wallet/id1444586019?l=ru&mt=8" className="currency-card">
                                     <span>LVL</span>
                                     <img src={lvl} alt="logo" className="currency-logo" />
-                                </div>
-                            </li>
-                            <li className="glide__slide">
-                                <div className="currency-card">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://itunes.apple.com/ua/app/levelapp-crypto-wallet/id1444586019?l=ru&mt=8" className="currency-card">
                                     <span>Bitpanda</span>
                                     <img src={bitpanda} alt="logo" className="currency-logo" />
-                                </div>
-                            </li>
-                        </ul>
+                                </a>
+                            </div>
+                        </Slider>
                     </div>
                 </div>
                 <p className="help-info">Commission: $ 23,14</p>
                 <p className="help-info">Price: 1 BTC $4 014.82 ~ ₴111 522.90</p>
 
                 <div className="buying-container">
-                    <div className="one-half column">
-                        <div className="form-container">
-                            <div className="checkbox-container">
-                                <input type="checkbox" id="question" name="question" />
-                                <label htmlFor="question">If you have an application</label>
-                            </div>
-                            <div className="inputs-container">
-                                <input placeholder="Enter BTC address" className="full-input" />
-                                <input placeholder="Amount BTC" className="half-input" />
-                                <input placeholder="0 UAH" className="half-input" />
-                                <input placeholder="Enter your email" className="full-input" />
-                            </div>
-                            <div className="button">
-                                <span>Buy</span>
+                    <div className="row">
+                        <div className="one-half column">
+                            <div className="form-container">
+                                <div className="checkbox-container">
+                                    <input type="checkbox" id="question" name="question" />
+                                    <label htmlFor="question">If you have an application</label>
+                                </div>
+                                <div className="inputs-container">
+                                    <input placeholder="Enter BTC address" className="full-input" />
+                                    <input placeholder="Amount BTC" className="half-input" />
+                                    <input placeholder="0 UAH" className="half-input" />
+                                    <input placeholder="Enter your email" className="full-input" />
+                                </div>
+                                <div className="button">
+                                    <span>Buy</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
+                    
                         <div className="one-half column buying-text">
                             <p>
                                 You can buy bitcoins (BTC) at the price indicated in the widget on the left. 

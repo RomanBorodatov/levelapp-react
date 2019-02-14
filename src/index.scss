@@ -10,6 +10,10 @@ html {
     }
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     width: 100%;
     display: flex;
@@ -138,7 +142,8 @@ section {
 
         .button {
             width: 250px;
-            padding: 20px 0px 20px 0px;
+            height: 58px;
+            padding: 20px 7px 20px 0px;
             background: linear-gradient(222.82deg, #FD7800 2.99%, #FFB400 100%);
             box-shadow: 0px 25px 35px rgba(248, 129, 136, 0.25);
             border-radius: 100px;
@@ -149,11 +154,25 @@ section {
             align-items: center;
 
             span {
-                width: 100%;
+                width: 190px;
                 font-style: normal;
                 font-weight: bold;
                 line-height: normal;
                 font-size: 0.9rem;
+
+                flex-grow: 0;
+            }
+
+            .appStore-icon {
+                background-color: #FFFFFF;
+                height: 45px;
+                width: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 0;
+
+                border-radius: 50%;
             }
         }
     };
@@ -246,6 +265,7 @@ section {
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 60px 0;
+        max-width: 100%;
 
         ul {
             margin-bottom: 0; 
@@ -262,13 +282,16 @@ section {
             padding: 10px 10px;
 
             img {
-                max-width: 155px;
+                max-width: 100%;
             }
         }
     }
 }
 
 .section-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: url("./static/svg/section4_background.svg");
@@ -330,28 +353,29 @@ section {
         }
     }
 
-    .currency-cards {
-        display: flex;
-        justify-content: center;
+    .currency-cards-container {
+        width: 80%;
+        max-width: 900px;
         margin-bottom: 30px;
 
-        ul {
-            margin-bottom: 0;
+        *:focus {
+            outline: none;
         }
 
         .currency-card {
             height: 93px;
             display: flex;
-            box-sizing: border-box;
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             padding: 15px 10px;
+            margin: 0 10px;
             opacity: 0.6;
 
             background: #FFFFFF;
             box-shadow: 0px 15px 35px rgba(0, 163, 255, 0.05);
             border-radius: 8px;
+
+            text-decoration: none;
 
             .bitcoin-logo {
                 width: 58px;
@@ -558,7 +582,8 @@ section {
 
         .button {
             width: 250px;
-            padding: 20px 0px 20px 0px;
+            height: 58px;
+            padding: 20px 7px 20px 0px;
             background: linear-gradient(222.82deg, #FD7800 2.99%, #FFB400 100%);
             box-shadow: 0px 25px 35px rgba(248, 129, 136, 0.25);
             border-radius: 100px;
@@ -569,11 +594,25 @@ section {
             align-items: center;
 
             span {
-                width: 100%;
+                width: 190px;
                 font-style: normal;
                 font-weight: bold;
                 line-height: normal;
                 font-size: 0.9rem;
+
+                flex-grow: 0;
+            }
+
+            .appStore-icon {
+                background-color: #FFFFFF;
+                height: 45px;
+                width: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 0;
+
+                border-radius: 50%;
             }
         }
     };

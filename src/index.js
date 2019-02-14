@@ -4,6 +4,8 @@ import './normalize.css';
 import './skeleton.css';
 import './glide.core.css';
 import './glide.theme.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

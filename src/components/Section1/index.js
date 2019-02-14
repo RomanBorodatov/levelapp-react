@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import iphone from '../../static/iphone.png';
+import appstore from '../../static/svg/appstore_icon.svg';
 
 class Section1 extends Component {
   render() {
@@ -8,9 +9,12 @@ class Section1 extends Component {
             <div className="row">
                 <div className="two-thirds column hero">
                     <h1>Securely buy Bitcoin and Ethereum with Apple Pay</h1>
-                    <div className="button">
+                    <a href="https://itunes.apple.com/ua/app/levelapp-crypto-wallet/id1444586019?l=ru&mt=8" className="button">
                         <span>Get LevelApp</span>
-                    </div>
+                        <div className="appStore-icon">
+                            <img src={appstore} alt="icon" />
+                        </div>
+                    </a>
                 </div>
                 <div className="one-third column">
                     <img src={iphone} alt="phone" className="phone" />
