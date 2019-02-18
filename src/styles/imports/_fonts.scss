@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('./assets/fonts/icomoon.woff') format('woff'),
+  url('./assets/fonts/icomoon.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-decoration: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close-copy:before {
+  content: "\e900";
+}
+.icon-close:before {
+  content: "\e901";
+}
+.icon-telegram:before {
+  content: "\e902";
+}
+.icon-file:before {
+  content: "\e903";
+}
+.icon-twitter:before {
+  content: "\e904";
+}
+.icon-insta:before {
+  content: "\e905";
+}
+.icon-bit:before {
+  content: "\e906";
+}
+.icon-github:before {
+  content: "\e907";
+}
+.icon-invest:before {
+  content: "\e908";
+}
+.icon-doc:before {
+  content: "\e909";
+}
+.icon-wallet:before {
+  content: "\e90a";
+}
+.icon-connect:before {
+  content: "\e90b";
+}
+.download {
+  display: block;
+  height: 20px;
+  width: 20px;
+  webkit-mask: url('./static/img/download.svg') no-repeat 50% 50%;
+  mask: url('./static/img/download.svg') no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  &.white {
+    background-color: #fff;
+  }
+  &.yellow {
+    background-color: #FFB000;
+  }
+}

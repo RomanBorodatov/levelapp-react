@@ -1,0 +1,44 @@
+@import "./imports/mixins";
+
+.map {
+  padding: 120px 7.9% 0;
+  // margin-bottom: 120px;
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 23px;
+    font-size: 2rem;
+    color: #4b5e6e;
+    font-weight: 700;
+  }
+
+  &__title-logo {
+    display: block;
+    max-width: 74px;
+    margin-left: 25px;
+  }
+  &__desc {
+    max-width: 520px;
+    margin-bottom: 80px;
+    opacity: 0.5;
+    line-height: 1.38;
+    font-size: 1.2rem;
+    color: #4b5e6e;
+  }
+  @include bp(640, max) {
+    margin-bottom: 60px;
+    &__desc {
+      margin-bottom: 50px;
+    }
+    &__title-logo {
+      max-width: 60px;
+    }
+  }
+  img {
+    vertical-align: top;
+    max-width: 100%;
+    max-height: 100%;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}

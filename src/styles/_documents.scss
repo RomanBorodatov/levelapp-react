@@ -1,0 +1,144 @@
+
+@import "./imports/mixins";
+
+.docs {
+  position: relative;
+  background: linear-gradient(to bottom, #f1f6ff 35%,#b8def0 100%);
+  .section-holder {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  &__title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #4b5e6e;
+  }
+  &__load-all {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding-left: 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fd7800;
+    text-transform: uppercase;
+    &:hover {
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s linear;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 7.6%;
+  }
+  &__doc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28.5%;
+    text-align: center;
+    padding: 80px 0 84px;
+    color: #fff;
+    background: url('./static/img/doc-bg.svg');
+    background-size: cover;
+    border-radius: 30px;
+
+    i {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 65px;
+    }
+  }
+  &__doc-name {
+    display: block;
+    margin-bottom: 46px;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  &__file {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    &:hover {
+      svg {
+        width: 25px;
+        height: 25px;
+        transition: .3s linear;
+      }
+    }
+  }
+  @include bp(1240, max) {
+    &__list {
+      padding: 0;
+    }
+  }
+  @include bp(924, max) {
+    &__doc {
+      width: 30%;
+    }
+  }
+  @include bp(820, max) {
+    &__doc {
+      width: 45%;
+      &:last-child {
+        margin-top: 40px;
+      }
+    }
+  }
+  @include bp(640, max) {
+    .section-holder {
+      padding-top: 60px;
+      padding-bottom: 100px;
+    }
+    &__title-block {
+      margin-bottom: 50px;
+    }
+    &__doc {
+      width: 48%;
+      padding: 70px 0 74px;
+    }
+  }
+  @include bp(520, max) {
+    &__list {
+      justify-content: center;
+    }
+    &__doc {
+      width: 70%;
+      &:nth-child(2) {
+        margin-top: 40px;
+      }
+    }
+    &__load-all {
+      position: absolute;
+      left: 50%;
+      bottom: 50px;
+      transform: translateX(-50%);
+    }
+  }
+  @include bp(360, max) {
+    &__doc {
+      width: 90%;
+    }
+  }
+}

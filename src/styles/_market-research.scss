@@ -1,0 +1,261 @@
+@import "./imports/mixins";
+
+.market {
+  &__visual-block {
+    padding: 120px 0;
+    background-color: #fdfdfd;
+    text-align: center;
+  }
+  &__stat-block {
+    padding: 120px 15px;
+  }
+  &__wrap {
+    max-width: 586px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    .market__note {
+      margin-top: 20px;
+      font-weight: normal;
+    }
+  }
+  &__note {
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.5;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4b5e6e;
+  }
+  &__image-title {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #4b5e6e;
+  }
+  &__subtitle2 {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #4b5e6e;
+  }
+  &__descr {
+    display: block;
+    max-width: 293px;
+    margin: 20px auto 0;
+    font-size: 14px;
+    color: #4b5e6e;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1090px;
+    margin: 0 auto;
+  }
+  &__col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28.5%;
+  }
+  &__col-name {
+    color: #4b5e6e;
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
+  &__col-value {
+    color: #6ce5d8;
+    display: block;
+    margin-bottom: 26px;
+    font-size: 4.7rem;
+    line-height: 0.64;
+    font-weight: bold;
+    span {
+      font-size: 2rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    max-width: 945px;
+  }
+  &__pie-chart {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  &__chart {
+    position: relative;
+    width: 50%;
+    &:first-child {
+      .market__chart-bg {
+        width: 100%;
+        max-width: 376px;
+        max-height: 465px;
+      }
+    }
+    &:last-child {
+      .market__chart-bg {
+        width: 100%;
+        max-width: 397px;
+        max-height: 415px;
+      }
+    }
+  }
+  &__chart-title {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    line-height: normal;
+  }
+  .grid {
+    position: absolute;
+    left: 15px;
+    width: 100%;
+    text-align: left;
+    svg {
+      max-width: 100%;
+    }
+  }
+  &__line-chart {
+    position: relative;
+    max-width: 974px;
+    margin: 120px auto 0;
+    padding: 0 15px;
+    &--mobile {
+      display: none;
+    }
+  }
+  .visual {
+    position: absolute;
+    bottom: 15.5%;
+    left: 107px;
+    overflow: hidden;
+    max-width: 85%;
+    width: 100%;
+    svg {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+  .background {
+    svg {
+      width: 100%;
+    }
+  }
+  @include bp(1100, max) {
+    .grid {
+      left: 0;
+    }
+  }
+  @include bp(1015, max) {
+    &__pie-chart {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__chart {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 45px;
+      }
+    }
+    .grid {
+      left: calc(50% - 250px);
+    }
+  }
+  @include bp(970, max) {
+    .visual {
+      left: 11%;
+    }
+  }
+  @include bp(768, max) {
+    &__visual-block {
+      padding: 70px 0;
+    }
+    &__stat-block {
+      padding: 70px 15px;
+    }
+    &__wrap {
+      margin: 0 auto 50px auto;
+    }
+    &__col-name {
+      font-size: 1.25rem;
+    }
+    &__col {
+      width: 30%;
+      padding: 20px 0;
+    }
+    &__col-value {
+      font-size: 2.3rem;
+    }
+    &__line-chart {
+      margin-top: 70px;
+    }
+  }
+  @include bp(640, max) {
+    img, &__col, .grid {
+      transition: none !important;
+      transition-duration: 0 !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+    &__line-chart {
+      display: none;
+      &--mobile {
+        display: block;
+        .visual {
+          width: auto;
+          max-width: 100%;
+          overflow: visible;
+          left: calc(50% - 145px);
+          bottom: 10.5%;
+        }
+        .background svg {
+          max-width: 356px;
+        }
+      }
+    }
+  }
+  @include bp(520, max) {
+    &__chart {
+      &:first-child {
+        width: 80%;
+        .grid {
+          left: -15%;
+          width: 85%;
+          max-width: 318px;
+        }
+      }
+      &:last-child {
+        .market__chart-bg {
+          width: 90%;
+        }
+        .grid {
+          left: -5px;
+          bottom: 0;
+          max-width: 487px;
+        }
+      }
+    }
+  }
+  @include bp(380, max) {
+    .visual {
+      svg {
+        max-width: 95.5%;
+      }
+    }
+  }
+  @include bp(360, max) {
+    .visual {
+      left: 9%;
+      svg {
+        max-width: 90%;
+      }
+    }
+  }
+}

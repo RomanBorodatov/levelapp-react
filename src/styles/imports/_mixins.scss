@@ -1,0 +1,52 @@
+@mixin bp($point, $type, $orientation: "") {
+  @if ($orientation != "") {
+    @media screen and (orientation: #{$orientation}) and (#{$type}-width: #{$point}px) {@content;}
+  } @else {
+    @media screen and (#{$type}-width: #{$point}px) {@content;}
+  }
+}
+@mixin centeringXY {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin centeringX {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+@mixin centeringY {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin grid-ie-calc($items: 30, $wrap-on: 3, $grid-gap: 0) {
+  $current-row: 1;
+  $current-column: 1;
+  
+  @if $grid-gap > 0 {
+    & {
+      margin: $grid-gap / 2;
+      
+      @supports (grid-gap: $grid-gap) {
+        margin: 0;
+      }
+    }
+  }
+  
+  @for $i from 1 through $items {
+    @if $current-column > $wrap-on {
+      $current-column: 1;
+      $current-row: $current-row + 1;
+    }
+    
+    &:nth-child(#{$i}) {
+      -ms-grid-row: $current-row;
+      -ms-grid-column: $current-column;
+    }
+    
+    $current-column: $current-column + 1;
+  }
+}

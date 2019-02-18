@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="417" viewBox="0 0 822 417">
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#4B5E6E" font-family="Montserrat-Bold, Montserrat" font-size="14" font-weight="bold" transform="translate(0 -5)">
+            <tspan x="0" y="293">3,8%</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="118" y="210">6,5</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="181" y="231">5,7</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="243" y="186">7,2</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="346" y="93">10,1</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="408" y="81">10,4</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="471" y="83">10,3</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="599" y="111">9,5</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="654" y="81">10,7</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Regular, Montserrat" font-size="14" transform="translate(0 -5)">
+            <tspan x="714" y="76">10,8</tspan>
+        </text>
+        <text fill="#4B5E6E" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold" transform="translate(0 -5)">
+            <tspan x="756" y="23">12,8%</tspan>
+        </text>
+        <path fill="#00A3FF" fill-rule="nonzero" d="M779 39h20v378h-20zM719 90h20v326h-20zM659 95h20v321h-20zM599 125h20v291h-20zM471 97h22v319h-22zM409 95h22v321h-22zM347 107h22v310h-22zM241 195h22v222h-22zM179 245h22v172h-22zM117 224h22v193h-22zM2 307h22v110H2z"/>
+    </g>
+</svg>

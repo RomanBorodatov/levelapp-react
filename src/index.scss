@@ -73,6 +73,51 @@ section {
     margin: 0;
     color: #fff;
 
+    .languagepicker {
+        display: inline-block;
+        padding: 0;
+        height: 40px;
+        overflow: hidden;
+        transition: all .3s ease;
+        margin: 0 50px 0 0;
+        // vertical-align: top;
+        float: left;
+    }
+    .languagepicker:hover {
+        /* don't forget the 1px border */
+        height: 81px;
+    }
+    
+    .languagepicker a{
+        text-decoration: none;
+    }
+    
+    .languagepicker li {
+        display: block;
+        padding: 0px 15px;
+        line-height: 40px;
+    }
+    
+    .languagepicker li:hover{
+    }
+    
+    .languagepicker a:first-child li {
+        border: none;
+    }
+    
+    .languagepicker li img {
+        margin-right: 5px;
+    }
+    
+    
+    // .large:hover {
+    //     /* 
+    //     don't forget the 1px border!
+    //     The first language is 40px heigh, 
+    //     the others are 41px
+    //     */
+    //     height: 81px;
+    // }
     @media screen and (max-width: 768px) {
         display: none;
 
@@ -324,6 +369,10 @@ section {
     }
 
     .buying-text {
+        padding: 0 0 0 50px;
+        @media screen and (max-width: 550px) {
+            padding: 0;
+        }
         p {
             font-style: normal;
             font-weight: normal;
@@ -914,3 +963,11 @@ section {
         color: #4B5E6E;
     }
 }
+@import "./styles/imports/fonts.scss";
+@import "./styles/market-research.scss";
+@import "./styles/compare.scss";
+@import "./styles/aos.scss";
+@import "./styles/_map";
+@import "./styles/_documents";
+@import "./styles/roadmap.scss";
+@import "./styles/_team";
