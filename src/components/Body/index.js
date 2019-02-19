@@ -9,7 +9,6 @@ import Section6 from "../Section6";
 import Section7 from "../Section7";
 import Section8 from "../Section8";
 import Section9 from "../Section9";
-import MarketResearch from "../MarketResearch";
 import Footer from "../Footer";
 import Compare from "../Compare";
 import Map from "../Map";
