@@ -9,6 +9,7 @@ import Slider from 'react-slick';
 
 class Section3 extends Component {
     render() {
+        const { messages } = this.props;
         const settings = {
             dots: false,
             infinite: false,
@@ -44,7 +45,7 @@ class Section3 extends Component {
         };
         return (
             <section className="section-3">
-                <h3 className="section-title">Our partners</h3>
+                <h3 className="section-title">{messages.title}</h3>
                     <Slider {...settings} className="partners">
                         <div>
                             <div className="partner-card">

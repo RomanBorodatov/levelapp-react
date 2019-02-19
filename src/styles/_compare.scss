@@ -114,7 +114,7 @@
       color: #fff;
       border-right: 1px solid #fff;
       div {
-        height: 41px;
+        height: 41px; 
         padding: 5px 20px 5px 16px;
         &:not(:last-child) {
           border-bottom: 1px solid transparentize(#fff, .7);
@@ -148,7 +148,7 @@
     }
     td {
       min-width: 100px;
-      height: 41px;
+      height: 51px;
       padding: 0;
       font-size: 1.2rem;
       &:first-child {

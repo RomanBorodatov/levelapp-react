@@ -37,6 +37,7 @@ class Header extends Component {
   };
 
   render() {
+    const { messages } = this.props;
     return (
       <header>
         <div className="logo">
@@ -48,27 +49,27 @@ class Header extends Component {
         >
           <li className="nav-item">
             <a href="#features" onClick={this.scroll}>
-              Features and MVP
+            {messages.features}
             </a>
           </li>
           <li className="nav-item">
             <a href="#research" onClick={this.scroll}>
-              Market research
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#docs-sect" onClick={this.scroll}>
-              Documents
+            {messages.research}
             </a>
           </li>
           <li className="nav-item">
             <a href="#team-sect" onClick={this.scroll}>
-              Team
+            {messages.team}
             </a>
           </li>
           <li className="nav-item">
             <a href="#roadmap-sect" onClick={this.scroll}>
-              Roadmap
+              {messages.roadmap}
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="#docs-sect" onClick={this.scroll}>
+              
             </a>
           </li>
           <li onClick={this.handleLocalization}>
@@ -76,14 +77,14 @@ class Header extends Component {
               <a href="#eng">
                 <li>
 									<a href="/" >
-                  Eng
+                  {messages.eng}
 									</a>
                 </li>
               </a>
               <a href="#rus">
                 <li>
 									<a href="/ru">
-                  Rus
+                  {messages.rus}
 									</a>
                 </li>
               </a>

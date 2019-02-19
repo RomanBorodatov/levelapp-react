@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
 import partners from '../../static/partners.png';
+import messages from '../../locale/messages';
 
 class Footer extends Component {
   render() {
+      const { messages } = this.props;
     return (
         <footer className="footer">
             <div className="footer-main-block">
-                <h2 className="footer-title">Get Updated</h2>
-                <p className="footer-subtitle">Join the mailing list and get current news first</p>
+                <h2 className="footer-title">{messages.title}</h2>
+                <p className="footer-subtitle">{messages.subtitle}</p>
                 <form>
                     <div className="input-holder">
-                        <input type="email" name="email" placeholder="Enter your email" className="footer-input" aria-required="true" aria-invalid="false" />
+                        <input type="email" name="email" placeholder={messages.placeholder} className="footer-input" aria-required="true" aria-invalid="false" />
                     </div>
                     <button type="submit" className="button">
-                        <span>Subscribe</span>
+                        <span>{messages.subscribe}</span>
                     </button>
                 </form> 
                 <h3 className="footer-question">
-                    Do you have questions? Get in touch
+                    {messages.question}
                 </h3> 
                 <a target="_blank" href="mailto:info@levelapp.cx" className="footer-mail-to"><p>info@levelapp.cx</p></a>
                 <div className="container footer-agreement-container">
                     <div className="row">
                         <div className="one-third column footer-agreement">
-                            <a href="/agreement" target="_blank">User agreement</a>
+                            <a href="/agreement" target="_blank"> {messages.agreement}</a>
                         </div>
                         <div className="one-third column footer-agreement">
-                            <a href="/policy" target="_blank">Privacy policy</a>
+                            <a href="/policy" target="_blank">{messages.policy}</a>
                         </div>
                         <div className="one-third column footer-agreement">
-                            <a href="/about" target="_blank">About us</a>
+                            <a href="/about" target="_blank">{messages.about}</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +39,7 @@ class Footer extends Component {
                     <div className="footer-payment">
                         <img src={partners} alt="partner" />
                         <div>
-                            The payment for digital assets in the LevelApp application performed in accordance with the exchange rate indicated in the LevelApp application at the time of purchasing. Contacts: support@levelapp.cx +380688869873
+                            {messages.payment}
                         </div>
                     </div>
                     <ul className="footer-socials">

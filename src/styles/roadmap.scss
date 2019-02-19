@@ -2,9 +2,13 @@
 
 .roadmap {
   margin-bottom: 120px;
+  margin-top: 120px;
   &__title {
     margin-bottom: 50px;
     text-align: center;
+    font-size: 2rem;
+    color: #4b5e6e;
+    font-weight: 700;
   }
   &__list {
     position: relative;
@@ -76,9 +80,11 @@
     }
     &:nth-child(even) {
       margin-top: 90px;
+      list-style-type: none;
       .roadmap__data {
         margin-left: auto;
         padding: 20px 30px 20px 50px;
+        padding-left: 110px;
       }
       &:before {
         transform: rotateY(-180deg);
@@ -89,15 +95,19 @@
     }
     &:nth-child(odd) {
       .roadmap__data {
-        padding: 20px 50px 20px 30px;
+        padding: 0px 50px 20px 30px;
+        margin: -25px 0 0 0;
       }
     }
   }
   &__date, &__text, &__subtitle {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
+  }
+  &__text {
+    width: 90%;
   }
   &__item-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     & + p {
       margin-top: 15px;
     }
@@ -139,7 +149,9 @@
       }
       &:nth-child(odd) {
         .roadmap__data {
-          padding: 20px 30px 20px 50px;
+          padding: 0px 50px 20px 30px;
+          margin: 0;
+          padding-left: 0;
         }
       }
     }
@@ -182,6 +194,8 @@
       }
       &:nth-child(odd), &:nth-child(even) {
         .roadmap__data {
+          margin: 0;
+          padding-left: 0;
           padding: 20px;
         }
       }

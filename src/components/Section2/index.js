@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import video from '../../static/video.mp4';
 import play from '../../static/play.png';
+import messages from '../../locale/messages';
 
 class Section2 extends Component {
     constructor(props) {
@@ -28,9 +29,10 @@ class Section2 extends Component {
     }
 
     render() {
+        const { messages } = this.props;
         return (
             <section className="section-2">
-                <h3 className="section-title">LevelApp - Buy and spend crypto with Apple Pay!</h3>
+                <h3 className="section-title">{messages.title}</h3>
                 <div className="video-container" onClick={this.handleClick}>
                     <video src={video} id="video" ref={this.player}></video>
                     <div className={`video-overlay ${this.state.playing ? 'hide' : ''}`} id="video-control">
@@ -38,7 +40,7 @@ class Section2 extends Component {
                             <div className="image">
                                 <img src={play} alt="play" />
                             </div>
-                            <span>WATCH VIDEO</span>
+                            <span>{messages.video}</span>
                         </div>
                     </div>
                 </div>

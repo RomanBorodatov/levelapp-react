@@ -1,4 +1,5 @@
 import React from "react";
+import messages from "../../locale/messages";
 
 class Compare extends React.Component {
   constructor(props) {
@@ -18,34 +19,35 @@ class Compare extends React.Component {
   };
 
   render() {
+    const { messages } = this.props;
     return (
       <section className="compare">
-        <h2 className="compare__title">Comparison table</h2>
+        <h2 className="compare__title">{messages.title}</h2>
         {(this.state.windowWidthVal > 767) ? (
           <table className="compare__table">
             <thead>
               <tr>
                 <th />
                 <th>
-                  <span>Spend cryptocurrency</span>
+                  <span>{messages['1']}</span>
                 </th>
                 <th>
-                  <span>Buy cryptocurrency</span>
+                  <span>{messages['2']}</span>
                 </th>
                 <th>
-                  <span>Immediate transactions</span>
+                  <span>{messages['3']}</span>
                 </th>
                 <th>
-                  <span>P to P transferss</span>
+                  <span>{messages['4']}</span>
                 </th>
                 <th>
-                  <span>NFC payment</span>
+                  <span>{messages['5']}</span>
                 </th>
                 <th>
-                  <span>Cryprocurrencies exchange</span>
+                  <span>{messages['6']}</span>
                 </th>
                 <th>
-                  <span>Biometrics security</span>
+                  <span>{messages['7']}</span>
                 </th>
               </tr>
             </thead>
@@ -58,7 +60,7 @@ class Compare extends React.Component {
                 <td className="checked" />
                 <td className="checked" />
                 <td className="checked" />
-                <td>TouchID and FaceID</td>
+                <td>TouchID {messages.and} FaceID</td>
               </tr>
               <tr>
                 <td>MCO</td>
@@ -166,26 +168,19 @@ class Compare extends React.Component {
           <div className="compare__table-wrap">
             <div className="compare__fixed-col">
               <div />
-              <div>
-                Spend <br /> cryptocurrency{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[8]}}>
               </div>
-              <div>
-                Buy <br /> cryptocurrency{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[9]}}>
               </div>
-              <div>
-                Immediate <br /> transactions{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[10]}}>
               </div>
-              <div>
-                P to P <br /> transferss{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[11]}}>
               </div>
-              <div>
-                NFC <br /> payment{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[12]}}>
               </div>
-              <div>
-                Cryprocrrencies <br /> exchange{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[13]}}>
               </div>
-              <div>
-                Biometrics <br /> security{" "}
+              <div dangerouslySetInnerHTML={{__html: messages[14]}}>
               </div>
             </div>
             <table className="compare__table">
@@ -307,7 +302,7 @@ class Compare extends React.Component {
                 </tr>
                 <tr>
                   <td>
-                    TouchID <br /> and FaceID
+                    TouchID <br /> {messages.and} FaceID
                   </td>
                   <td className="checked" />
                   <td className="checked" />

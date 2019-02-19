@@ -6,12 +6,13 @@ import test3 from '../../assets/LevelApp_SEC_Howey_Test.pdf';
 
 class Documents extends Component {
   render() {
+    const { messages: title } = this.props;
     return (
       <section id="docs-sect" class="docs">
         <div class="section-holder">
           <div class="docs__title-block">
             <h2 class="docs__title" v-html="$t('pages.app.titles.4')" >
-              Documents
+              {title}
             </h2>
             <a
               class="docs__load-all"

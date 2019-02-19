@@ -48,12 +48,15 @@ class Section4 extends Component {
       });
   };
 
-  updateWallet = e => {
-    this.setState({ wallet: e.target.value });
+  updateWallet = async e => {
+    await this.setState({ wallet: e.target.value });
+    console.log(this.state.wallet)
     this.renew();
   };
-  updateEmail = e => {
-    this.setState({ email: e.target.value });
+  updateEmail = async e => {
+    await this.setState({ email: e.target.value });
+    console.log(this.state.email)
+
     this.renew();
   };
   updateUAH = async e => {
@@ -97,9 +100,10 @@ class Section4 extends Component {
       action: "pay",
       amount: this.state.uah,
       currency: "UAH",
-      description: this.state.wallet,
+      description: `${this.state.registeredApp ? `Користувач levelApp ` : 'Користувач '} ${this.state.wallet} купив ${this.state.btc}BTC за ₴${this.state.uah}. Його пошта - ${this.state.email}`,
       email: this.state.email,
-      order_id: id
+      order_id: id,
+      info: `${this.state.registeredApp ? `Користувач levelApp ` : 'Користувач '} ${this.state.wallet} купив ${this.state.btc}BTC за ₴${this.state.uah}. Його пошта - ${this.state.email}`
     };
     const data = new Buffer(JSON.stringify(json_string)).toString("base64");
     const priv = "3fUHAoOdtwEp1bKmbyTYSYBRrRzL4Xltr3Be6Lf6";
@@ -119,6 +123,7 @@ class Section4 extends Component {
   };
 
     render() {
+      const { messages } = this.props;
         const settings = {
             dots: false,
             infinite: false,
@@ -154,8 +159,8 @@ class Section4 extends Component {
         
     return (
       <section className="section-4">
-        <h3 className="section-title">Buy crypto with payment card</h3>
-        <p className="section-subtitle">Select a card for payment</p>
+        <h3 className="section-title">{messages.title}</h3>
+        <p className="section-subtitle">{messages.subtitle}</p>
 
         <div className="currency-cards-container">
                     <div className="currency-cards">
@@ -180,12 +185,6 @@ class Section4 extends Component {
                                     <img src={lvl} alt="logo" className="currency-logo" />
                                 </a>
                             </div>
-                            <div>
-                                <a href="https://itunes.apple.com/ua/app/levelapp-crypto-wallet/id1444586019?l=ru&mt=8" className="currency-card">
-                                    <span>Bitpanda</span>
-                                    <img src={bitpanda} alt="logo" className="currency-logo" />
-                                </a>
-                            </div>
                         </Slider>
                     </div>
           </div>
@@ -193,13 +192,13 @@ class Section4 extends Component {
 
 
         <p className="help-info">
-          Commission: $
+          {messages.commision}: $
           {parseFloat(this.state.priceUSD * 1.1 - this.state.priceUSD).toFixed(
             2
           )}
         </p>
         <p className="help-info">
-          Price: 1 BTC ${parseFloat(this.state.priceBTC * 1.1).toFixed(2)} ~ ₴
+          {messages.price}: 1 BTC ${parseFloat(this.state.priceBTC * 1.1).toFixed(2)} ~ ₴
           {parseFloat(this.state.priceUSD * this.state.priceBTC * 1.1).toFixed(
             2
           )}
@@ -217,33 +216,33 @@ class Section4 extends Component {
                   onClick={this.registeredUser}
                   value={this.state.registeredApp}
                 />
-                <label htmlFor="question">If you have an application</label>
+                <label htmlFor="question">{messages.question}</label>
               </div>
               <div className="inputs-container">
                 <input
                   placeholder={
                     this.state.registeredApp
-                      ? "Enter LevelApp username"
-                      : "Enter BTC address"
+                      ? messages.form.registeredApp.username
+                      : messages.form.registeredApp.btc
                   }
                   className="full-input"
                   value={this.state.wallet}
                   onChange={this.updateWallet}
                 />
                 <input
-                  placeholder="Amount BTC"
+                  placeholder={messages.form.btc}
                   className="half-input"
                   value={this.state.btc}
                   onChange={this.updateBTC}
                 />
                 <input
-                  placeholder="0 UAH"
+                  placeholder={messages.form.uah}
                   className="half-input"
                   value={this.state.uah}
                   onChange={this.updateUAH}
                 />
                 <input
-                  placeholder="Enter your email"
+                  placeholder={messages.form.email}
                   className="full-input"
                   value={this.state.email}
                   onChange={this.updateEmail}
@@ -262,7 +261,7 @@ class Section4 extends Component {
                   value={this.state.signature}
                 />
                 <div className="button" onClick={this.submit}>
-                  <span>Buy</span>
+                  <span>{messages.form.buttom}</span>
                 </div>
               </form>
             </div>
@@ -270,21 +269,13 @@ class Section4 extends Component {
           <div className="row">
             <div className="one-half column buying-text">
               <p>
-                You can buy bitcoins (BTC) at the price indicated in the widget
-                on the left. The price includes the commission of the payment
-                system, as well as a fee to miners for processing the
-                transaction. There are no additional fees from our side,
-                however, your bank may charge you additional fees (for example,
-                when using loan funds).
+                {messages.buyingText1}
               </p>
               <p>
-                The minimum purchase amount is 0.005 BTC, the maximum - 0.1 BTC
-                Purchasing request is processing from 2 hours to 2 days. You can
-                contact support at support@levelapp.cx or Telegram
-                @levelapponline
+                {messages.buyingText2}
               </p>
-              <h4>Need a better exchange rate or Apple Pay?</h4>
-              <a href="#">Install LevelApp</a>
+              <h4>{messages.question2}</h4>
+              <a href="#">{messages.install}</a>
             </div>
           </div>
           </div>

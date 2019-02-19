@@ -29,6 +29,8 @@ class Team extends Component {
   };
 
   render() {
+
+    const { messages } = this.props; 
     const settings = {
       centerMode: true,
       centerPadding: '60px',
@@ -49,7 +51,7 @@ class Team extends Component {
     return (
       <section id="team-sect" className="team section-holder">
         <div className="team__title-block">
-          <h2 className="team__title" v-html="$t('pages.app.titles.5')" >Team</h2>
+          <h2 className="team__title" v-html="$t('pages.app.titles.5')" >{messages.title}</h2>
           {/* <a className="team__join" href="#" v-html="$t('pages.app.team__join')">
             JOIN THE TEAM
           </a> */}
@@ -73,12 +75,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team1.name')"
-                  />
+                  >{messages.team1.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team1.position')"
-                  />
+                  >{messages.team1.position}</span>
                 </div>
               </a>
             </li>
@@ -99,12 +99,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.advisor0.name')"
-                  />
+                  >{messages.team8.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.advisor0.position')"
-                  />
+                  >{messages.team8.position}</span>
                 </div>
               </a>
             </li>
@@ -125,12 +123,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team5.name')"
-                  />
+                  >{messages.team5.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team5.position')"
-                  />
+                  >{messages.team5.position}</span>
                 </div>
               </a>
             </li>
@@ -151,12 +147,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team7.name')"
-                  />
+                  >{messages.team7.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team7.position')"
-                  />
+                  >{messages.team7.position}</span>
                 </div>
               </a>
             </li>
@@ -177,12 +171,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team2.name')"
-                  />
+                  >{messages.team2.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team2.position')"
-                  />
+                  >{messages.team2.position}</span>
                 </div>
               </a>
             </li>
@@ -203,12 +195,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team3.name')"
-                  />
+                  >{messages.team3.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team3.position')"
-                  />
+                  >{messages.team3.position}</span>
                 </div>
               </a>
             </li>
@@ -229,12 +219,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team4.name')"
-                  />
+                  >{messages.team6.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team4.position')"
-                  />
+                  >{messages.team6.position}</span>
                 </div>
               </a>
             </li>
@@ -255,12 +243,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.advisor1.name')"
-                  />
+                  >{messages.team4.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.advisor1.position')"
-                  />
+                  >{messages.team4.position}</span>
                 </div>
               </a>
             </li>
@@ -281,44 +267,15 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.advisor2.name')"
-                  />
+                  >{messages.team9.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.advisor2.position')"
-                  />
+                  >{messages.team9.position}</span>
                 </div>
               </a>
             </li>
           </ul>
         ) : <Slider {...settings} >
-           <div className="team__item">
-              <a
-                className="team__link"
-                onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
-                href="https://www.linkedin.com/in/manakhov/"
-              >
-                <div className="team__logo">
-                  <img src={team9} alt="team" />
-                  <img
-                    className="team__icon"
-                    src={linkedin}
-                    alt=""
-                  />
-                </div>
-                <div className="team__name-block">
-                  <span
-                    className="team__name"
-                    v-html="$t('pages.app.advisor2.name')"
-                  />
-                  <span
-                    className="team__position"
-                    v-html="$t('pages.app.advisor2.position')"
-                  />
-                </div>
-              </a>
-            </div>
             <div className="team__item">
               <a
                 className="team__link"
@@ -337,12 +294,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team1.name')"
-                  />
+                  >{messages.team1.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team1.position')"
-                  />
+                  >{messages.team1.position}</span>
                 </div>
               </a>
             </div>
@@ -364,12 +319,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.advisor0.name')"
-                  />
+                  >{messages.team8.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.advisor0.position')"
-                  />
+                  >{messages.team8.position}</span>
                 </div>
               </a>
             </div>
@@ -391,12 +344,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team5.name')"
-                  />
+                  >{messages.team5.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team5.position')"
-                  />
+                  >{messages.team5.position}</span>
                 </div>
               </a>
             </div>
@@ -418,12 +369,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team7.name')"
-                  />
+                  >{messages.team7.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team7.position')"
-                  />
+                  >{messages.team7.position}</span>
                 </div>
               </a>
             </div>
@@ -445,12 +394,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team2.name')"
-                  />
+                  >{messages.team2.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team2.position')"
-                  />
+                  >{messages.team2.position}</span>
                 </div>
               </a>
             </div>
@@ -472,12 +419,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team3.name')"
-                  />
+                  >{messages.team3.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team3.position')"
-                  />
+                  >{messages.team3.position}</span>
                 </div>
               </a>
             </div>
@@ -499,12 +444,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.team4.name')"
-                  />
+                  >{messages.team6.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.team4.position')"
-                  />
+                  >{messages.team6.position}</span>
                 </div>
               </a>
             </div>
@@ -526,12 +469,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.advisor1.name')"
-                  />
+                  >{messages.team4.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.advisor1.position')"
-                  />
+                  >{messages.team4.position}</span>
                 </div>
               </a>
             </div>
@@ -553,12 +494,10 @@ class Team extends Component {
                 <div className="team__name-block">
                   <span
                     className="team__name"
-                    v-html="$t('pages.app.advisor2.name')"
-                  />
+                  >{messages.team9.name}</span>
                   <span
                     className="team__position"
-                    v-html="$t('pages.app.advisor2.position')"
-                  />
+                  >{messages.team9.position}</span>
                 </div>
               </a>
             </div>

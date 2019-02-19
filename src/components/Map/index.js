@@ -6,10 +6,11 @@ import pay from '../../static/img/pay.png';
 
 class Map extends Component {
   render() {
+    const { messages } = this.props;
     return (
       <section className="map section-holder">
         <h2 className="map__title" v-html="$t('pages.app.titles.3')" >
-        Countries
+        {messages.title}
           {/* <img
             className="map__title-logo"
             src={pay}
@@ -17,7 +18,7 @@ class Map extends Component {
           /> */}
         </h2>
         <p className="map__desc" v-html="$t('pages.app.map__desc')" >
-        There are more than 30 countries that support Apple Pay. New ones to be announced soon.</p>
+        {messages.desc}</p>
         <img src={map} alt="map" />
       </section>
     );
