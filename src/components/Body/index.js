@@ -23,15 +23,16 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      messages: locales.en
+      messages: locales.en,
+      language: 'en'
     };
   }
 
   async componentDidMount() {
     if (/\/ru/g.test(this.props.location.pathname)) {
-      await this.setState({ messages: locales.ru });
+      await this.setState({ messages: locales.ru, language: 'ru' });
     } else {
-      await this.setState({ messages: locales.en });
+      await this.setState({ messages: locales.en, language: 'en' });
     }
     console.log(this.state)
   }
@@ -39,7 +40,7 @@ class Body extends React.Component {
   render() {
     return (
       <div>
-        <Header messages={this.state.messages.header}/>
+        <Header location={this.props.location.pathname} messages={this.state.messages.header}/>
         <Section1 messages={this.state.messages.section1} />
         <Section2 messages={this.state.messages.section2} />
         <Section3 messages={this.state.messages.section3} />

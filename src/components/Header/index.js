@@ -5,10 +5,9 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      responsive: false
-    };
-    this.state = {
-      localizationBar: true
+      responsive: false,
+      localizationBar: true,
+      language: ''
     };
   }
 
@@ -17,6 +16,16 @@ class Header extends Component {
       responsive: !this.state.responsive
     });
   };
+
+  async componentWillMount() {
+    console.log(this.props.location)
+    if (/\/ru/g.test(this.props.location)) {
+      await this.setState({ language: 'Рус' });
+    } else {
+      await this.setState({ language: 'Eng' });
+    }
+
+  }
 
   scroll = event => {
     event.preventDefault();
@@ -49,17 +58,17 @@ class Header extends Component {
         >
           <li className="nav-item">
             <a href="#features" onClick={this.scroll}>
-            {messages.features}
+              {messages.features}
             </a>
           </li>
           <li className="nav-item">
             <a href="#research" onClick={this.scroll}>
-            {messages.research}
+              {messages.research}
             </a>
           </li>
           <li className="nav-item">
             <a href="#team-sect" onClick={this.scroll}>
-            {messages.team}
+              {messages.team}
             </a>
           </li>
           <li className="nav-item">
@@ -68,35 +77,48 @@ class Header extends Component {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#docs-sect" onClick={this.scroll}>
-              
-            </a>
+            <a href="#docs-sect" onClick={this.scroll} />
           </li>
           <li onClick={this.handleLocalization}>
-            <ul class="languagepicker">
-              <a href="#eng">
+            <div className="sl-nav">
+              <ul>
                 <li>
-									<a href="/" >
-                  {messages.eng}
-									</a>
+                  <b>{this.state.language}</b>{" "}
+                  <i className="fa fa-angle-down" aria-hidden="true" />
+                  <div className="triangle" />
+                  <ul>
+                    <li>
+                      <i className="sl-flag">
+                        <div id="eng" />
+                      </i>{" "}
+                      <a href='/' className="language active">{messages.eng}</a>
+                    </li>
+                    <li>
+                      <i className="sl-flag">
+                        <div id="ru" />
+                      </i>{" "}
+                      <a href="/ru" className="language">{messages.rus}</a>
+                    </li>
+                  </ul>
                 </li>
-              </a>
-              <a href="#rus">
-                <li>
-									<a href="/ru">
-                  {messages.rus}
-									</a>
-                </li>
-              </a>
-            </ul>
+              </ul>
+            </div>
           </li>
           <li>
-            <a target="_blank" href="https://www.instagram.com/levelapp_ico/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/levelapp_ico/"
+            >
               <i className="fab fa-instagram" />
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://t.me/levelapp_ico">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://t.me/levelapp_ico"
+            >
               <i className="fab fa-telegram-plane" />
             </a>
           </li>

@@ -17,6 +17,11 @@ export default {
       commision: "Комиссия",
       price: "Цена",
       question: "Если у Вас есть приложение",
+      error: {
+        min: 'Ошибка! Минимальная сумма покупки - 0.005 BTC',
+        max: "Ошибка! Максимальная сумма покупки - 0.1 BTC ",
+        email: 'Ошибка! Неправильный еmail',
+      },
       form: {
         registeredApp: {
           username: "Введите LevelApp никнейм",
@@ -189,7 +194,12 @@ export default {
       policy: 'Политика конфиденциальности',
       about: 'О нас',
       payment: 'Оплата цифровых активов в приложении LevelApp осуществляется в соответствии с обменным курсом, указанным в приложении LevelApp на момент покупки. контакты support@levelapp.cx 3806888869873',
-      placeholder: 'Введите свой email'
+      placeholder: 'Введите свой email',
+      error: {
+        wrongEmail: 'Ошибка! Неправильный еmail',
+        exists: 'Этот email уже подписан на обновления'
+      },
+      success: 'Вы успешно подписались на обновления!'
     },
     header: {
       features: 'Особенности и MVP',
@@ -197,7 +207,7 @@ export default {
       team: 'Команда',
       roadmap: 'Дорожная карта',
       docs: 'Документы',
-      eng: 'Анг',
+      eng: 'Eng',
       rus: 'Рус'
     }
   },
@@ -222,6 +232,11 @@ export default {
       commision: "Comission",
       price: "Price",
       question: "If you have an application",
+      error: {
+        min: 'Error! The minimum purchase amount is 0.005 BTC',
+        max: "Error! The maximum purchase amount is 0.1 BTC ",
+        email: 'Error! Email is not valid',
+      },
       form: {
         registeredApp: {
           username: "Enter LevelApp username",
@@ -402,7 +417,12 @@ export default {
       policy: 'Privacy policy',
       about: 'About us',
       payment: 'The payment for digital assets in the LevelApp application performed in accordance with the exchange rate indicated in the LevelApp application at the time of purchasing. Contacts: support@levelapp.cx +380688869873',
-      placeholder: 'Enter your email'
+      placeholder: 'Enter your email',
+      error: {
+        wrongEmail: 'Error! Email is not valid',
+        exists: 'This subscriber is already exist'
+      },
+      success: 'You\'ve been successfully subscribed for updates!'
     },
     header: {
       features: 'Features and MVP',
@@ -411,7 +431,7 @@ export default {
       roadmap: 'Roadmap',
       docs: 'Documents',
       eng: 'Eng',
-      rus: 'Rus'
+      rus: 'Рус'
     }
 
   }

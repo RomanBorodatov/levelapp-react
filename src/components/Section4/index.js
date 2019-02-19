@@ -6,7 +6,11 @@ import bitpanda from "../../static/bitpanda.png";
 import crypto from "crypto";
 
 import Slider from 'react-slick';
-// import Glide from "@glidejs/glide";
+
+const validateEmail =(email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
 class Section4 extends Component {
   constructor(props) {
@@ -20,7 +24,8 @@ class Section4 extends Component {
       email: "",
       registeredApp: false,
       data: "",
-      signature: ""
+      signature: "",
+      error: ''
     };
     this.form = React.createRef();
   }
@@ -50,13 +55,10 @@ class Section4 extends Component {
 
   updateWallet = async e => {
     await this.setState({ wallet: e.target.value });
-    console.log(this.state.wallet)
     this.renew();
   };
   updateEmail = async e => {
     await this.setState({ email: e.target.value });
-    console.log(this.state.email)
-
     this.renew();
   };
   updateUAH = async e => {
@@ -93,6 +95,7 @@ class Section4 extends Component {
     this.renew();
   };
   renew = () => {
+    this.setState({ error: '' })
     const id = Date.now() + "a" + Math.floor(Math.random() * 10 + 1);
     const json_string = {
       version: "3",
@@ -113,9 +116,18 @@ class Section4 extends Component {
   };
 
   submit = async () => {
-    console.log(this.state.signature);
-    console.log(this.state.data);
-    this.form.current.submit();
+    if (this.state.btc < 0.005) {
+      await this.setState({ error: this.props.messages.error.min })
+    }
+    if (this.state.btc > 0.1) {
+      await this.setState({ error: this.props.messages.error.max })
+    }
+    if (!validateEmail(this.state.email)) {
+      await this.setState({ error: this.props.messages.error.email })
+    }
+    if (this.state.error === '') {
+      this.form.current.submit();
+    }
   };
 
   registeredUser = e => {
@@ -260,9 +272,10 @@ class Section4 extends Component {
                   name="signature"
                   value={this.state.signature}
                 />
-                <div className="button" onClick={this.submit}>
+                <div className={`button ${this.state.error ? 'button__disabled' : null }`} onClick={this.submit}>
                   <span>{messages.form.buttom}</span>
                 </div>
+                {this.state.error ? <span className="error" >{this.state.error} </span> : null }
               </form>
             </div>
           </div>

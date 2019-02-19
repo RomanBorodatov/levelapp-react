@@ -61,7 +61,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/bohdan-kuleba-984576169/"
               >
                 <div className="team__logo">
@@ -85,7 +85,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/tatjana-gutschmidt-035104139/"
               >
                 <div className="team__logo">
@@ -109,7 +109,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/paulaverkiev?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BK5liQYxkRsG3xROG4DrhuQ%3D%3D"
               >
                 <div className="team__logo">
@@ -133,7 +133,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/helenvino?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5kKQVbAYQg%2BNzbiT9d1aTQ%3D%3D"
               >
                 <div className="team__logo">
@@ -157,7 +157,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/andrii-hedeon/"
               >
                 <div className="team__logo">
@@ -181,7 +181,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/nikolai-timofejev-19667715b/"
               >
                 <div className="team__logo">
@@ -205,7 +205,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/alexanderkisel/"
               >
                 <div className="team__logo">
@@ -229,7 +229,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/dektox/"
               >
                 <div className="team__logo">
@@ -253,7 +253,7 @@ class Team extends Component {
             <li className="team__item">
               <a
                 className="team__link"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/manakhov/"
               >
                 <div className="team__logo">
@@ -280,7 +280,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/bohdan-kuleba-984576169/"
               >
                 <div className="team__logo">
@@ -305,7 +305,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/tatjana-gutschmidt-035104139/"
               >
                 <div className="team__logo">
@@ -330,7 +330,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/paulaverkiev?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BK5liQYxkRsG3xROG4DrhuQ%3D%3D"
               >
                 <div className="team__logo">
@@ -355,7 +355,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/helenvino?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5kKQVbAYQg%2BNzbiT9d1aTQ%3D%3D"
               >
                 <div className="team__logo">
@@ -380,7 +380,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/andrii-hedeon/"
               >
                 <div className="team__logo">
@@ -405,7 +405,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/nikolai-timofejev-19667715b/"
               >
                 <div className="team__logo">
@@ -430,7 +430,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/alexanderkisel/"
               >
                 <div className="team__logo">
@@ -455,7 +455,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/dektox/"
               >
                 <div className="team__logo">
@@ -480,7 +480,7 @@ class Team extends Component {
               <a
                 className="team__link"
                 onMouseDown={(e) => e.preventDefault()}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/manakhov/"
               >
                 <div className="team__logo">

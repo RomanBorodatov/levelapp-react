@@ -17,7 +17,7 @@ class Documents extends Component {
             <a
               class="docs__load-all"
               href={all}
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               download
             >
               <svg
@@ -56,7 +56,7 @@ class Documents extends Component {
             <li class="docs__doc">
               <i class="icon-file" />
               <span class="docs__doc-name">LightPaper</span>
-              <a target="_blank" href={test} class="docs__file" download>
+              <a target="_blank" rel="noopener noreferrer" href={test} class="docs__file" download>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -91,7 +91,7 @@ class Documents extends Component {
             <li class="docs__doc">
               <i class="icon-file" />
               <span class="docs__doc-name">WhitePaper</span>
-              <a target="_blank" href={test2} class="docs__file" download>
+              <a target="_blank" rel="noopener noreferrer" href={test2} class="docs__file" download>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -126,7 +126,7 @@ class Documents extends Component {
             <li class="docs__doc">
               <i class="icon-file" />
               <span class="docs__doc-name">SEC Howey test</span>
-              <a target="_blank" href={test3} class="docs__file" download>
+              <a target="_blank" rel="noopener noreferrer" href={test3} class="docs__file" download>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
