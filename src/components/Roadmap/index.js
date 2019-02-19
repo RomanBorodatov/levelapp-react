@@ -6,7 +6,7 @@ class RoadMap extends Component {
     return (
       <section id="roadmap-sect" class="roadmap section-holder">
         <h2 class="roadmap__title">{messages.title}</h2>
-        <ul class="roadmap__list">
+        <ul class="roadmap__list row" >
           <li class="roadmap__item passed">
             <div class="roadmap__data">
               <span class="roadmap__date" v-html="$t('pages.roadmap.1.date')">{messages['1'].date}</span>

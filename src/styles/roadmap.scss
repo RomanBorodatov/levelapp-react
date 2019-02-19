@@ -84,7 +84,19 @@
       .roadmap__data {
         margin-left: auto;
         padding: 20px 30px 20px 50px;
-        padding-left: 110px;
+        // padding-left: 110px;
+
+      }
+      .roadmap {
+        &__date {
+          padding-left: 80px;
+        }
+        &__item-title {
+          padding-left: 80px;
+        }
+        &__text {
+          padding-left: 80px;
+        }
       }
       &:before {
         transform: rotateY(-180deg);
@@ -119,6 +131,40 @@
     margin: 5px 0 10px;
   }
 
+  @include bp(1448, max) {
+    &__item {
+    &:nth-child(even) {
+      .roadmap {
+        &__date {
+          padding-left: 60px;
+        }
+        &__item-title {
+          padding-left: 60px;
+        }
+        &__text {
+          padding-left: 60px;
+        }
+      }
+    }
+  }
+  @include bp(1400, max) {
+    &__item {
+    &:nth-child(even) {
+      .roadmap {
+        &__date {
+          padding-left: 20px;
+        }
+        &__item-title {
+          padding-left: 20px;
+        }
+        &__text {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+
   @include bp(1310, max) {
     &__list {
       &:before {
@@ -128,6 +174,7 @@
     &__item {
       width: 100%;
       margin-left: 40px;
+      list-style-type: none;
       &:not(:last-child) {
         margin-bottom: 30px;
       }
@@ -145,14 +192,28 @@
         }
         .roadmap__data {
           margin-left: 0;
+          padding-left: 30px;
         }
       }
       &:nth-child(odd) {
         .roadmap__data {
-          padding: 0px 50px 20px 30px;
+          padding: 20px 50px 20px 30px;
           margin: 0;
-          padding-left: 0;
         }
+      }
+      &:nth-child(even) {
+        .roadmap {
+          &__date {
+            padding-left: 0;
+          }
+          &__item-title {
+            padding-left: 0;
+          }
+          &__text {
+            padding-left: 0;
+          }
+        }
+      }
       }
     }
     &__data {
@@ -214,4 +275,5 @@
       }
     }
   }
+}
 }
