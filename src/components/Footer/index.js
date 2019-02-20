@@ -141,7 +141,7 @@ class Footer extends Component {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://mobile.twitter.com/LevelApp_ICO"
+                  href="https://twitter.com/levelapp_ico?lang=en"
                 >
                   <i className="fab fa-twitter" />
                 </a>
@@ -150,7 +150,7 @@ class Footer extends Component {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://t.me/levelapp_ico"
+                  href="https://t.me/levelappann"
                 >
                   <i className="fab fa-telegram-plane" />
                 </a>

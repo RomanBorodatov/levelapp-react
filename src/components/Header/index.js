@@ -117,7 +117,7 @@ class Header extends Component {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://t.me/levelapp_ico"
+              href="https://t.me/levelappann"
             >
               <i className="fab fa-telegram-plane" />
             </a>
