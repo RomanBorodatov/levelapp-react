@@ -51,7 +51,7 @@ class Body extends React.Component {
         <Section9 messages={this.state.messages.section9} />
         <Compare messages={this.state.messages.compare}/>
         <Map messages={this.state.messages.map}/>
-        <RoadMap messages={this.state.messages.roadmap} />
+        {/* <RoadMap messages={this.state.messages.roadmap} /> */}
         <Team messages={this.state.messages.team}/>
         <Documents messages={this.state.messages.documents} />
         <Footer messages={this.state.messages.footer} />

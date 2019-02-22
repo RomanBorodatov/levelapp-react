@@ -71,11 +71,11 @@ class Header extends Component {
               {messages.team}
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a href="#roadmap-sect" onClick={this.scroll}>
               {messages.roadmap}
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a href="#docs-sect" onClick={this.scroll} />
           </li>
@@ -108,7 +108,7 @@ class Header extends Component {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/levelapp_ico/"
+              href="https://www.instagram.com/l_e_v_e_l_app/"
             >
               <i className="fab fa-instagram" />
             </a>
