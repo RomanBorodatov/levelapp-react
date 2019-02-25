@@ -86,30 +86,6 @@ class Team extends Component {
               <a
                 className="team__link"
                 target="_blank" rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/tatjana-gutschmidt-035104139/"
-              >
-                <div className="team__logo">
-                  <img src={team8} alt="team" />
-                  <img
-                    className="team__icon"
-                    src={linkedin}
-                    alt=""
-                  />
-                </div>
-                <div className="team__name-block">
-                  <span
-                    className="team__name"
-                  >{messages.team8.name}</span>
-                  <span
-                    className="team__position"
-                  >{messages.team8.position}</span>
-                </div>
-              </a>
-            </li>
-            <li className="team__item">
-              <a
-                className="team__link"
-                target="_blank" rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/paulaverkiev?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BK5liQYxkRsG3xROG4DrhuQ%3D%3D"
               >
                 <div className="team__logo">
@@ -298,31 +274,6 @@ class Team extends Component {
                   <span
                     className="team__position"
                   >{messages.team1.position}</span>
-                </div>
-              </a>
-            </div>
-            <div className="team__item">
-              <a
-                className="team__link"
-                onMouseDown={(e) => e.preventDefault()}
-                target="_blank" rel="noopener noreferrer"
-                href="https://www.linkedin.com/in/tatjana-gutschmidt-035104139/"
-              >
-                <div className="team__logo">
-                  <img src={team8} alt="team" />
-                  <img
-                    className="team__icon"
-                    src={linkedin}
-                    alt=""
-                  />
-                </div>
-                <div className="team__name-block">
-                  <span
-                    className="team__name"
-                  >{messages.team8.name}</span>
-                  <span
-                    className="team__position"
-                  >{messages.team8.position}</span>
                 </div>
               </a>
             </div>
