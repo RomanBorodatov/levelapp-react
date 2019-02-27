@@ -54,7 +54,7 @@ class Body extends React.Component {
         {/* <RoadMap messages={this.state.messages.roadmap} /> */}
         <Team messages={this.state.messages.team}/>
         <Documents messages={this.state.messages.documents} />
-        <Footer messages={this.state.messages.footer} />
+        <Footer messages={this.state.messages.footer} language={this.state.language} />
       </div>
     );
   }
