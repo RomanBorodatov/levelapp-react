@@ -416,7 +416,7 @@ export default {
       agreement: 'User agreement',
       policy: 'Privacy policy',
       about: 'About us',
-      payment: 'The payment for digital assets in the LevelApp application performed in accordance with the exchange rate indicated in the LevelApp application at the time of purchasing. Contacts: support@levelapp.cx +380688869873',
+      payment: 'The payment for digital assets in the LevelApp application performed in accordance with the exchange rate indicated in the LevelApp application at the time of purchasing. Contacts: support@levelapp.cx +380968751777',
       placeholder: 'Enter your email',
       error: {
         wrongEmail: 'Error! Email is not valid',
