@@ -3,6 +3,7 @@ import Body from './components/Body';
 import Policy from './pages/policy';
 import Fees from './pages/fees';
 import About from './pages/about';
+import AboutEng from './pages/aboutEng';
 import PrivacyPolicy from './pages/privacy_policy';
 import Terms from './pages/terms_and_conditions';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -17,11 +18,12 @@ class App extends Component {
               <Route exact path="/" exact component={Body} />
               <Route path="/ru" exact component={Body} />
               <Route path="/ru/policy" component={Policy} />
-              <Route path="/privacy-policy" component={PrivacyPolicy} />
+              <Route path="/policy" component={PrivacyPolicy} />
               <Route path="/ru/offerta" component={Offerta} />
               <Route path="/fees" component={Fees} />
               <Route path="/terms" component={Terms} />
               <Route path="/ru/about" component={About} />
+              <Route path="/about" component={AboutEng} />
             </Switch>
         </Router>
       </div>

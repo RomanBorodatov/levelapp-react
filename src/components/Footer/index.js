@@ -96,7 +96,7 @@ class Footer extends Component {
           <div className="container footer-agreement-container">
             <div className="row">
               <div className="one-third column footer-agreement">
-                <a href={`${this.props.language === 'ru' ? '/ru' : ''}/offerta`} target="_blank" rel="noopener noreferrer">
+                <a href={`${this.props.language === 'ru' ? '/ru/offerta' : '/terms'}`} target="_blank" rel="noopener noreferrer">
                   {" "}
                   {messages.agreement}
                 </a>

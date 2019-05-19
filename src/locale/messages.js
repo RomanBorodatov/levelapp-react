@@ -413,7 +413,7 @@ export default {
       subtitle:'Join the mailing list and get current news first',
       subscribe: 'Subscribe',
       question: 'Do you have questions? Get in touch',
-      agreement: 'User agreement',
+      agreement: 'Terms and conditions',
       policy: 'Privacy policy',
       about: 'About us',
       payment: 'The payment for digital assets in the LevelApp application performed in accordance with the exchange rate indicated in the LevelApp application at the time of purchasing. Contacts: support@levelapp.cx +380968751777',
