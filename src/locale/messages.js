@@ -216,7 +216,7 @@ export default {
 
   en: {
     section1: {
-      title: "Securely buy Bitcoin and Ethereum with Apple Pay",
+      title: "Multi-Currency Wallet with securely buy Bitcoin and Ethereum with Apple Pay",
       button: "Get LevelApp"
     },
     section2: {
@@ -341,6 +341,7 @@ export default {
         position: 'Marketing Advisor',
       },
     },
+
     roadmap: {
       title: 'Roadmap',
       '1': {
@@ -432,6 +433,28 @@ export default {
       docs: 'Documents',
       eng: 'Eng',
       rus: 'Рус'
+    },
+    tradeMarkets: {
+      "title-b2b": "LevelApp is Now on p2pb2b",
+      "title-yobit": "LevelApp is Now on YObit",
+      supplies: 'Total supply:',
+      social: 'Our social networks:',
+      'body-b2b': `<p>Security plays one of the main roles in terms of cryptocurrency use. Digital assets are quite vulnerable to malware and hacker attacks thus it’s important to make sure that your funds and personal information are safe.</p>
+
+      <p>LevelApp is a cyber-security company that unites all antivirus technologies within one application. It works as a distributed platform where users can share information about any IT security incidents like viruses or hacker attacks in real time.</p>
+      
+      <p>Thanks to users, the system develops, becomes smarter and works faster. As soon as the app is installed to the device, it activates a P2P network and enables all security measures to keep your data safe.</p>
+      
+      <p>The token of LevelApp is now available on p2pb2b. Get all the latest news in our social networks.</p>`,
+
+      'body-yobit': `<p>Security plays one of the main roles in terms of cryptocurrency use. Digital assets are quite vulnerable to malware and hacker attacks thus it’s important to make sure that your funds and personal information are safe.</p>
+
+      <p>LevelApp is a cyber-security company that unites all antivirus technologies within one application. It works as a distributed platform where users can share information about any IT security incidents like viruses or hacker attacks in real time.</p>
+      
+      <p>Thanks to users, the system develops, becomes smarter and works faster. As soon as the app is installed to the device, it activates a P2P network and enables all security measures to keep your data safe.</p>
+      
+      <p>The token of LevelApp is now available on p2pb2b. Get all the latest news in our social networks.</p>`,
+      start: "Start trading"
     }
 
   }

@@ -16,6 +16,7 @@ import Documents from "../Documents";
 import RoadMap from "../Roadmap";
 import Team from "../Team";
 import locales from '../../locale/messages'
+import TradeMarkets from '../TradeMarkets';
 
 
 class Body extends React.Component {
@@ -45,6 +46,7 @@ class Body extends React.Component {
         <Section3 messages={this.state.messages.section3} />
         <Section4 messages={this.state.messages.section4} />
         <Section5 messages={this.state.messages.section5} />
+        {/* <TradeMarkets messages={this.state.messages.tradeMarkets} /> */}
         <Section6 messages={this.state.messages.section6} />
         <Section7 messages={this.state.messages.section7} />
         <Section8 messages={this.state.messages.section8} />

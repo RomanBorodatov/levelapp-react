@@ -1045,3 +1045,108 @@ section {
 @import "./styles/_documents";
 @import "./styles/roadmap.scss";
 @import "./styles/_team";
+
+
+.trade-markets {
+
+  margin-bottom: 50px;
+  
+  .money {
+    color: #2D9CDB;
+    font-size: 1.3rem;
+  }
+  .supplies {
+    color: #4b5e6e;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .section-subtitle {
+    color: #4b5e6e;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    color: #4b5e6e;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+
+    .content {
+      .text {
+        font-size: 1.1rem;
+
+      }
+    }
+
+    .image-column {
+      // flex-basis: 50%;
+      align-self: center;
+    }
+  }
+  @media (max-width: 728px) {
+    .image-column {
+      width: 100%!important;
+      height: 275px;
+    }
+  }
+  @media (max-width: 1800px) {
+    .image-column {
+      width: 100%!important;
+      height: 406px!important;
+    }
+  }
+  @media (min-width: 729px) {
+    .content{
+      width: 50%;
+    }
+    .image-column {
+      width: 50%!important;
+    }
+    .slick-track {
+          width: 600px!important
+    }
+        .slick-slide {
+          width: 300px!important
+    }
+  }
+  .button {
+    width: 150px;
+    padding: 20px 0px 20px 0px;
+    background: linear-gradient(222.82deg, #fd7800 2.99%, #ffb400 100%);
+    box-shadow: 0px 25px 35px rgba(248, 129, 136, 0.25);
+    border-radius: 100px;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__disabled {
+      background: linear-gradient(222.82deg, #888787 2.99%, #e4e4e4 100%);
+      box-shadow: 0px 25px 35px rgba(165, 165, 165, 0.25);
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+
+  .coin-img {
+    &__disabled {
+      filter: grayscale(0.8) opacity(0.6);
+    }
+  }
+
+
+
+}
